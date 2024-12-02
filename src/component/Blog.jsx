@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CiHeart } from "react-icons/ci";
 
 const Blog = (props) => {
   const [title, setTitle] = useState([
@@ -23,7 +24,10 @@ const Blog = (props) => {
     <>
       <div className="bg-black p-5 text-white text-xl font-bold">Blog</div>
       <h3 className="font-bold">
-        {title[0]} <button onClick={up}>🤍</button>{" "}
+        {title[0]}{" "}
+        <button onClick={up} className="text-lg text-blue-700">
+          <CiHeart />
+        </button>{" "}
         <span className="font-thin">{heart}</span>
       </h3>
       <p className="border-b">{props.date}</p>
